@@ -56,13 +56,13 @@
                   <a class="nav-link" href="index.html#subscription">সাবস্ক্রিপশন</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="faq.html">সাধারণ জিজ্ঞাসা</a>
+                  <a class="nav-link" href="#start-earning">আয় করুন</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="index.html#benifits">সুবিধা সমুহ</a>
+                  <a class="nav-link" href="#why-we">কেন আমরা?</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="affilate.html">রেফার এ ফ্রেন্ড</a>
+                  <a class="nav-link" href="#faq">প্রশ্নোত্তর</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link btn-login" href="login-affiliate.html">লগিন</a>
@@ -114,7 +114,7 @@
 
       <!-- Earning Step -->
 
-      <section class="earning-step">
+      <section class="earning-step"  id="start-earning">
         <div class="container">
           <div class="row">
             <div class="col-lg-12">
@@ -173,7 +173,7 @@
 
       <!-- Start Earning -->
 
-      <section class="start-earning-banner">
+      <section class="start-earning-banner" id="why-we">
         <div class="container">
           <form>
             <div class="row">
@@ -245,17 +245,17 @@
               </div>
             </div>
           </div>
-        </div>      
+        </div>  
       </section>
 
       <!-- /Why We -->
 
-      <section class="py-5">
+      <section class="faq-section" id="faq">
         <div class="container ">
           <div class="row">
             <div class="col-md-4 col-sm-12">
               <div class="">
-                <h3 class="py-2 text-dark">Prizebond Check FAQ</h3>
+                <h3 class="py-2 text-dark">Prizebond<span style="color: #ff0000;">Check</span>.com FAQ</h3>
                 <p class="py-2 text-secondary">Have questions? We have answers.</p>
               </div>
             </div>
@@ -395,6 +395,21 @@
 
     <!-- Main Js -->
     <script src="assets/js/custom.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("a").on('click', function(event) {
+          if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 800, function(){
+              window.location.hash = hash;
+            });
+          } 
+        });
+      });
+    </script>
 
   </body>
 </html>
